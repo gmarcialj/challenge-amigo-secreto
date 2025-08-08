@@ -34,7 +34,7 @@ function agregarAmigo() {
  */
 function actualizarLista() {
   // Obtener el elemento lista y limpiarlo
-  let lista = limpiarLista("listaAmigos");
+  let lista = limpiarElemento("listaAmigos");
 
   // Iterar sobre el array para agregar el elemento <li> por cada amigo
   amigos.forEach(function(amigo) {
@@ -44,7 +44,7 @@ function actualizarLista() {
 }
 
 // Función que limpia el elemento del DOM y lo devuelve para su reutilización
-function limpiarLista(elementoSeleccionado) {
+function limpiarElemento(elementoSeleccionado) {
   let elemento = document.getElementById(elementoSeleccionado);
   elemento.innerHTML = "";
 
@@ -69,8 +69,8 @@ function limpiarLista(elementoSeleccionado) {
   const amigoSeleccionado = amigos[indiceAleatorio];
 
   // Limpiar la lista y resultado
-  let lista = limpiarLista("listaAmigos");
-  let resultado = limpiarLista("resultado");
+  let lista = limpiarElemento("listaAmigos");
+  let resultado = limpiarElemento("resultado");
 
   // Mostrar el nombre del amigo seleccionado
   resultado.innerHTML = `El amigo secreto sorteado es: ${amigoSeleccionado}.`;
